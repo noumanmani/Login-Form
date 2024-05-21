@@ -1,82 +1,62 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
-    const languageSelect = document.getElementById('language');
-    const resultContainer = document.querySelector('.result p.resultText');
-    const startListeningButton = document.querySelector('.btn.record');
-    const recordButtonText = document.querySelector('.btn.record p');
-    const clearButton = document.querySelector('.btn.clear');
-    const downloadButton = document.querySelector('.btn.download');
+ const addnumber =(...one)=>{
+  return one
+}
+// console.log(addnumber(48,98,90,65,98));
+// function plasnumber(...saith){
+//     return saith
+// // }
+// // console.log('plus number',plasnumber (889,98765,109));
+// // console.log('okay');
 
-    let recognizing = false;
 
-    languages.forEach(language => {
-        const option = document.createElement('option');
-        option.value = language.code;
-        option.text = language.name;
-        languageSelect.add(option);
-    });
+// // const newarry = [79,99,67,745];
+// // function arrr (newa){
+// //    return newa [1,2,3]
+// // }
+// // console.log(newarry,arrr(newarry));
+// // let nome=()=>{
+// //     let a =90;
+// //     if(
+// //         a<=100
+// //     ){
+// //         console.log('90trye');
+// //     }
+// let a =78;
+// let n=89;
+// let c=99;
+// // function nouman (x,u){
+// //     return x+u
+// // }
+// // // console.log('right',nouman(a,n));
 
-    recognition.continuous = true;
-    recognition.interimResults = true;
-    recognition.lang = languageSelect.value;
+// // // let nome = ()=>{}
 
-    languageSelect.addEventListener('change', () => {
-        recognition.lang = languageSelect.value;
-    });
 
-    startListeningButton.addEventListener('click', toggleSpeechRecognition);
 
-    clearButton.addEventListener('click', clearResults);
+// // // let nouman = new Promise(
+// // //     ()=>{
+// // //         resolve,reject
+// // //     }
+// // // )
+// // console.log('asad');
+// // // console.log('ahsan');
+// // // console.log('hamza');
 
-    downloadButton.disabled = true;
+// // // function hlo(){
+// // //     console.log('hello');
+// // // }setTimeout((hlo) => {
+    
+// // // },2000);
+// // function hlo(){
+// //     console.log('nouman');
+// // }setTimeout(hlo,1000)
 
-    recognition.onresult = (event) => {
-        const result = event.results[event.results.length - 1][0].transcript;
-        resultContainer.textContent = result;
-        downloadButton.disabled = false;
-    };
 
-    recognition.onend = () => {
-        recognizing = false;
-        startListeningButton.classList.remove('recording');
-        recordButtonText.textContent = 'Start Listening';
-    };
+// console.log('nomme');
 
-    downloadButton.addEventListener('click', downloadResult);
-
-    function toggleSpeechRecognition() {
-        if (recognizing) {
-            recognition.stop();
-        } else {
-            recognition.start();
-        }
-
-        recognizing = !recognizing;
-        startListeningButton.classList.toggle('recording', recognizing);
-        recordButtonText.textContent = 'Stop Listening';
-    }
-
-    function clearResults() {
-        resultContainer.textContent = '';
-        downloadButton.disabled = true;
-    }
-
-    function downloadResult() {
-        const resultText = resultContainer.textContent;
-
-        const blob = new Blob([resultText], { type: 'text/plain' });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'Your-Text.txt';
-        a.style.display = 'none';
-
-        document.body.appendChild(a);
-        a.click();
-
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-
-});
+// setTimeout(
+//     ()=>{
+//         console.log('qasam');
+//     },2000,
+// )
+// console.log('shoib');
