@@ -1,4 +1,4 @@
-@ -0,0 +1,42 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     box-sizing: border-box;
@@ -40,4 +40,53 @@ align-items: center;
 }
 .login--form{
     position: relative;
+    background-color: hsla(0, 0%, 10%,.1);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem ;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+}
+.login--title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 2rem;
+}
+.login--content,
+.login--box{
+    display: grid;
+}
+.login--content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.login--box{
+    grid-template-columns: max-content 2fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--white-color);
+
+}
+
+.login--icon, .login--eye{
+font-size: 1.5rem;
+}
+.login--input{
+    width: 100%;
+    padding-block: .8rem;
+    background-color: gray;
+    color: white;
+    /* position: relative;
+    z-index: 1; */
+}
+.login--box-input{
+    position: relative;
+} 
+.login--label{
+position: absolute;
+left: 0;
+top: 13px;
+font-weight: var(--font-medium);
+transition: top .3s;font-size:.3s;
 }
