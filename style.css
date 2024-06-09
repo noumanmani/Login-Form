@@ -75,10 +75,10 @@ font-size: 1.5rem;
 .login--input{
     width: 100%;
     padding-block: .8rem;
-    background-color: gray;
+    background-color: black;
     color: white;
-    /* position: relative;
-    z-index: 1; */
+    position: relative;
+    z-index: 1;
 }
 .login--box-input{
     position: relative;
@@ -91,3 +91,67 @@ font-weight: var(--font-medium);
 transition: top .3s;font-size:.3s;
 }
 
+.login--eye{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+.login--box:nth-child(2) input{
+padding-right: 1.5rem;
+
+}
+.login--check,
+.login--check-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login--check{
+    margin-bottom: 2.5rem;
+
+}
+.login--checl-label,
+.login--forgot,
+.login--register{
+    font-size: var(--small-font-size);
+}
+.login--check-group{
+    gap: 5rem;
+}
+.login--check-input{
+    width: 16px;
+    height: 16px;
+}
+
+.login--forgot{
+    color: rgb(252, 141, 4);
+
+}
+.login--forgot:hover{
+    text-decoration: underline;
+
+}
+.login--button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5rem;
+    background-color: orangered;
+    font-weight: 500;
+    cursor: pointer;
+     margin-bottom: 2rem;
+}
+.login--register{
+    text-align: center;
+
+}
+.login--register a{
+    color: rgb(255, 44, 44);
+    font-weight: 500;
+
+}
+.login--register a:hover{
+text-decoration: underline;
+
+}
